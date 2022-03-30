@@ -13,15 +13,16 @@ namespace ConsoleApp1
         public punto p3 { get; set; }
         public punto p4 { get; set; }
        
-        public int CalcularArea(int x1,int y1, int x2, int y2, int x3, int y3, int x4, int y4)
+        public int CalcularArea()
         {
-            int area = Math.Abs((x1 * y2) + (x2 * y3) + (x3 * y4) - ((x2 * y1) + (x3 * y2) + (x4 * y3)));
+            
+            int area = Math.Abs((p1.x * p2.y) + (p2.x * p3.y) + (p3.x * p4.y) - ((p2.x * p1.y) + (p3.x * p2.y) + (p4.x * p3.y)));
 
             return area / 2;
         }
-        public int CalcularPerimetro(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)
+        public int CalcularPerimetro()
         {
-            int perimetro = (int)Math.Sqrt(Math.Pow((x4 - x1), 2) + Math.Pow((y4 - y1),2)) + (int)Math.Sqrt(Math.Pow((x3 - x2), 2) + Math.Pow((y3 - y2), 2)) + (int)Math.Sqrt(Math.Pow((x2 - x3), 2) + Math.Pow((y2 - y3), 2)) + (int)Math.Sqrt(Math.Pow((x1 - x4), 2) + Math.Pow((y1 - y4), 2));
+            int perimetro = (int)Math.Sqrt(Math.Pow((p4.x - p1.x), 2) + Math.Pow((p4.y - p1.y),2)) + (int)Math.Sqrt(Math.Pow((p3.x - p2.x), 2) + Math.Pow((p3.y - p2.y), 2)) + (int)Math.Sqrt(Math.Pow((p2.x - p3.x), 2) + Math.Pow((p2.y - p3.y), 2)) + (int)Math.Sqrt(Math.Pow((p1.x - p4.x), 2) + Math.Pow((p1.y - p4.y), 2));
             return perimetro;
         }
     }

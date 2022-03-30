@@ -27,9 +27,28 @@ namespace ConsoleApp1
             Console.WriteLine("Ingrese la coordenada en y del punto 4: ");
             int y4 = int.Parse(Console.ReadLine());
             Rectangulo rectangulo = new Rectangulo();
-            
-            int area = rectangulo.CalcularArea(x1,y1,x2,y2,x3,y3,x4,y4);
-            int perimetro = rectangulo.CalcularPerimetro(x1,y1,x2,y2,x3,y3,x4,y4);
+            rectangulo.p1 = new punto
+            {
+                x = x1,
+                y = y1,
+            };
+            rectangulo.p2 = new punto
+            {
+                x = x2,
+                y = y2,
+            };
+            rectangulo.p3 = new punto {
+                x = x3,
+                y = y3,
+            };
+            rectangulo.p4 = new punto {
+                x = x4,
+                y = y4,
+            };
+
+
+            int area = rectangulo.CalcularArea();
+            int perimetro = rectangulo.CalcularPerimetro();
 
             Console.WriteLine("El area es " + area);
             Console.WriteLine("El perimetro es " + perimetro);
