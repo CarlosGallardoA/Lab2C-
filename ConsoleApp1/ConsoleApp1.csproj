@@ -47,7 +47,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="punto.cs" />
     <Compile Include="Rectangulo.cs" />
-    <Compile Include="x1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
